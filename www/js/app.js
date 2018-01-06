@@ -16,6 +16,11 @@ var myApp = angular.module('starter', ['ionic', 'ui.router'])
         // from snapping when text inputs are focused. Ionic handles this internally for
         // a much nicer keyboard experience.
         cordova.plugins.Keyboard.disableScroll(true);
+        $ionicPlatform.onHardwareBackButton(function() {
+          event.preventDefault();
+          event.stopPropagation();
+          alert('going back now yall');
+       });
       }
       if (window.StatusBar) {
         StatusBar.styleDefault();

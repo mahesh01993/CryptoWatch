@@ -12,7 +12,7 @@ myApp.controller("CurrencyCtrl", function ($scope, $ionicModal, $state)
 
     $scope.selectCurrency=function(x){
         localStorage.setItem('currency',x);
-        $state.go('option')
+        $state.go('home')
     }
 })
 

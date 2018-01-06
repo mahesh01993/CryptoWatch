@@ -1,5 +1,5 @@
 <ion-header-bar class="bar-stable bar bar-header bar-balanced">
-  <button class="button button-icon icon ion-arrow-left-c" ui-sref="home"></button>
+  <button class="button button-icon icon ion-arrow-left-c" ui-sref="option"></button>
   <h1 class="title">CryptoWatch
 
   </h1>
@@ -12,8 +12,10 @@
   <div class="main">
     <input type="text" name="text" value="*" ng-model="searchText">
 
-
-    <div class="items">
+<div class="loader" ng-if="!data">
+    <img src="img/loader.gif">
+</div>
+    <div class="items" ng-if="data">
       <div class="item" ng-repeat="x in data | filter:searchText" ng-click="coinOption(x)">{{x.name}}
         <div class="toright">
           <span class="custom-badge " ng-if="!x.in_dashboard">

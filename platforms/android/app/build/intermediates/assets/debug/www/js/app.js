@@ -47,10 +47,27 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
         templateUrl: 'pages/search.html',
         controller: 'SearchCtrl'
       })
-      .state('selectcurrency',{
-        url:"/currency",
-        templateUrl:"pages/currency.html",
-        controller:"CurrencyCtrl"
+      .state('selectcurrency', {
+        url: "/currency",
+        templateUrl: "pages/currency.html",
+        controller: "CurrencyCtrl"
+      })
+      .state('aboutus', {
+        url: "/aboutus",
+        templateUrl: "pages/aboutus.html",
+        controller: "aboutCtrl"
+      })
+      .state('coindetails', {
+        url: "/coindetails/{myParam:json}",
+        // url: '/myState/{myParam:json}',
+        params: {
+          myParam: null
+        },
+        //   params: [
+        //     'myParam'
+        // ],
+        templateUrl: "pages/coindetails.html",
+        controller: "coinDetailsCtrl"
       })
 
 
@@ -76,4 +93,3 @@ myApp.controller("mainCtrl", function ($scope, $ionicModal) {
   };
 
 })
-

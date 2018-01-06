@@ -9902,7 +9902,7 @@ a.button {
   padding: 10px; }
   .coindata .col,
   .coindata .col-4 {
-    font-size: 10px; }
+    font-size: 11px; }
 
 .col {
   text-align: center; }
@@ -9966,7 +9966,9 @@ a.button {
   border: 0px; }
   .clearbutton .button {
     border: 0px;
-    padding: 2px; }
+    padding: 0px 8px; }
+  .clearbutton .ion-trash-b {
+    color: black; }
 
 .max-content {
   min-width: max-content !important; }
@@ -9979,6 +9981,17 @@ a.button {
 
 .coindetails {
   background: #d0f7d7; }
+  .coindetails hr {
+    width: 75%;
+    padding: 0px;
+    margin: 0px auto;
+    background: #100d0d;
+    height: 2px;
+    margin-bottom: 10px; }
+  .coindetails .subheading {
+    font-size: 1.5em;
+    padding: 20px;
+    padding-bottom: 10px; }
   .coindetails .row {
     padding: 3%;
     text-transform: capitalize; }
@@ -9986,8 +9999,25 @@ a.button {
     text-align: center;
     padding: 20px; }
     .coindetails .removebtn .button {
-      background: red;
       color: black;
       font-weight: bold;
       border-radius: 10px;
-      font-size: 1em; }
+      font-size: .9em;
+      background: #ff5757; }
+
+.allcoin .item {
+  padding: 10px 0px; }
+
+.popup-head {
+  background: #7ed08d; }
+
+@media only screen and (min-width: 650px) {
+  /* For portrait layouts only */
+  .coindata {
+    padding: 10px; }
+    .coindata .col,
+    .coindata .col-4 {
+      font-size: 15px; }
+  .title {
+    font-size: 20px;
+    font-weight: bold; } }

@@ -57,7 +57,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   padding: 10px;
   .col,
   .col-4 {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -146,7 +146,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   border: 0px;
   .button {
     border: 0px;
-    padding: 2px;
+    padding: 0px 8px;
+  }
+  .ion-trash-b{
+color:black;
   }
 }
 
@@ -165,6 +168,19 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .coindetails {
+  hr {
+    width: 75%;
+    padding: 0px;
+    margin: 0px auto;
+    background: #100d0d;
+    height: 2px;
+    margin-bottom: 10px;
+  }
+  .subheading {
+    font-size: 1.5em;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
   background: #d0f7d7;
   .row {
     padding: 3%;
@@ -174,11 +190,41 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     text-align: center;
     padding: 20px;
     .button {
-      background: red;
+      // background: red;
       color: black;
       font-weight: bold;
-      border-radius: 10px;
-       font-size: 1em;
+      border-radius: 10px; //  font-size: 1em;
+      font-size: .9em;
+      background: #ff5757;
     }
   }
+}
+
+.allcoin{
+  .item{
+    padding:10px 0px;
+  }
+}
+
+.popup-head{
+  background: #7ed08d;
+}
+
+
+//media query
+
+@media only screen and (min-width: 650px)  {
+  /* For portrait layouts only */
+  .coindata {
+    padding: 10px;
+    .col,
+    .col-4 {
+      font-size: 15px;
+    }
+  }
+  .title{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
 }

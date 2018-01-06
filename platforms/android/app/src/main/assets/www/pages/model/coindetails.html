@@ -1,0 +1,11 @@
+<ion-popover-view>
+        <ion-header-bar>
+          <h1 class="title">{{selectedCoin.name}}</h1>
+          <button>Add to Dashboard</button>
+        </ion-header-bar>
+        <ion-content>
+                <!-- {{selectedCoin}} -->
+
+                <div ng-repeat="x in selectedCoin">{{x}}</div>
+        </ion-content>
+      </ion-popover-view>

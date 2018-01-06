@@ -1,12 +1,12 @@
-myApp.controller("SearchCtrl", function ($scope, $http, $interval,$ionicActionSheet) {
-console.log("In Search Ctrl");
+myApp.controller("SearchCtrl", function ($scope, $http, $interval, $ionicActionSheet, $ionicPopup) {
+  console.log("In Search Ctrl");
 
-$scope.isThereInDashboard = function (id) {
+  $scope.isThereInDashboard = function (id) {
     // to check coin id is there in dashboard or not
     //returns true if coin is there in dashboard
     //returns false if its not
 
-    var coins = localStorage.getItem('user', $scope.listedCoin).split(",");
+    var coins = localStorage.getItem('user').split(",");
     for (var i = 0; i < coins.length; i++) {
       if (id == coins[i]) {
         return true;
@@ -16,7 +16,7 @@ $scope.isThereInDashboard = function (id) {
     return false;
   }
 
-$http({
+  $http({
     url: "https://api.coinmarketcap.com/v1/ticker/",
     method: "GET",
     // params: {user_id: user.id}
@@ -41,7 +41,7 @@ $http({
   })
 
   $scope.addToDashboard = function (name) {
-    var coins = localStorage.getItem('user', $scope.listedCoin).split(",");
+    var coins = localStorage.getItem('user').split(",");
     var isthere = false;
     console.log(name);
     for (var i = 0; i < coins.length; i++) {
@@ -71,9 +71,9 @@ $http({
         // var lastupdate = new Date(parseInt(data.data[1].last_updated))
         // $scope.ripple = data.data[1].price_usd + "$" + "   last updated  on" + lastupdate;
         angular.forEach($scope.data, function (dataa) {
-        //   dataa.rank = parseFloat(dataa.rank);
-        //   dataa.price_usd = parseFloat(dataa.price_usd);
-        //   dataa.percent_change_24h = parseFloat(dataa.percent_change_24h);
+          //   dataa.rank = parseFloat(dataa.rank);
+          //   dataa.price_usd = parseFloat(dataa.price_usd);
+          //   dataa.percent_change_24h = parseFloat(dataa.percent_change_24h);
           if ($scope.isThereInDashboard(dataa.id)) {
             dataa.in_dashboard = true;
           } else {
@@ -88,6 +88,7 @@ $http({
     })
   }
   $scope.coinOption = function (coin) {
+
     var name = coin.name;
     var id = coin.id;
     var isthere = $scope.isThereInDashboard(id)
@@ -95,26 +96,63 @@ $http({
     if (isthere) {
       option = "Remove From Dashboard"
     }
-
-    console.log(isthere, "is there")
-    var hideSheet = $ionicActionSheet.show({
-      buttons: [{
-        text: option
-      }, ],
-      titleText: name,
-      cancelText: 'Cancel',
-      cancel: function () {
-        // add cancel code..
-        hideSheet()
-      },
-      buttonClicked: function (index) {
-        console.log(index, "index aaaaa")
-        if (index == 0) {
+    if (isthere) {
+      //if coin is there then ask for remove
+      var confirmPopup = $ionicPopup.confirm({
+        title: "Remove "+coin.name,
+        template: 'Kindly Confirm To Remove This Coin from Your Dashboard'
+      });
+   
+      confirmPopup.then(function(res) {
+        if(res) {
+          // console.log('You are sure');
           $scope.addToDashboard(id)
+        } else {
+          // console.log('You are not sure');
         }
-        return true;
-      }
-    });
+      });
+    }
+    else{
+//if coin is not there then ask for add
+
+      console.log("else")
+      var confirmPopup = $ionicPopup.confirm({
+        title: "Add "+coin.name,
+        template: 'Kindly Confirm To Add This Coin To Your Dashboard'
+      });
+   
+      confirmPopup.then(function(res) {
+        if(res) {
+          // console.log('You are sure');
+          $scope.addToDashboard(id)
+        } else {
+          // console.log('You are not sure');
+        }
+      });
+    }
+
+
+
+
+    // console.log(isthere, "is there")
+    // var hideSheet = $ionicActionSheet.show({
+    //   buttons: [{
+    //     text: option
+    //   }, ],
+    //   titleText: name,
+    //   cancelText: 'Cancel',
+    //   cancel: function () {
+    //     // add cancel code..
+    //     hideSheet()
+    //   },
+    //   buttonClicked: function (index) {
+    //     console.log(index, "index aaaaa")
+    //     if (index == 0) {
+    //       $scope.addToDashboard(id)
+    //     }
+    //     return true;
+    //   }
+    // });
 
   }
 

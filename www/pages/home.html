@@ -1,4 +1,4 @@
-<ion-header-bar class="bar-stable bar bar-header bar-balanced" align-title="left">
+<ion-header-bar class="bar-stable bar bar-header bar-balanced" align-title="left" id="homepage">
 
 
   <h1 class="title max-content" >CryptoWatch
@@ -12,7 +12,10 @@
     </div>
     <div class="button button-icon icon ion-navicon" ui-sref="option"></div>
   </div> -->
+  
+  
   <div class="buttons clearbutton">
+      <div class="button button-icon icon ion-trash-b" ng-click="deleteAll()"></div>
     <div class="button" ui-sref="selectcurrency"> <span class="badge badge-assertive">
         {{currency}}
       </span></div>
@@ -25,7 +28,9 @@
   <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
   </ion-refresher>
   <div class="subheading">Dashboard</div>
-
+  <div class="loader" ng-if="ListofData==[]">
+      <img src="img/loader.gif">
+  </div>
   <div class="list">
     <div class="item row header">
       <div class="col-4" ng-click="changeSort('rank')">Rank</div>

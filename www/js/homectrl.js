@@ -1,6 +1,4 @@
-myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state, $timeout, $ionicModal, $ionicPopover) {
-
-
+myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state, $timeout,$ionicPopup, $ionicModal, $ionicPopover) {
 
   $scope.listedCoin = ["bitcoin", "ripple", "ethereum"]
   //   localStorage.setItem('user', $scope.listedCoin);
@@ -57,6 +55,7 @@ myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state
       }
     })
   }
+ 
 
 
 
@@ -64,6 +63,7 @@ myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state
     $scope.ListofData = [];
     for (var i = 0; i < $scope.coins.length; i++) {
       console.log($scope.coins[i])
+
       $http({
         url: "https://api.coinmarketcap.com/v1/ticker/" + $scope.coins[i] + "/?convert=" + $scope.currency,
         method: "GET",
@@ -76,6 +76,8 @@ myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state
 
           //   $scope.ripple = data.data[1].price_usd + "$" + "   last updated  on" + data.data[1].last_updated
         }
+      },function(){
+        console.log("something went wrong")
       })
     }
 
@@ -134,5 +136,27 @@ myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state
       myParam: x
     })
   }
+
+
+//fn to make dashboard empty
+$scope.deleteAll=function()
+{
+
+  var confirmPopup = $ionicPopup.confirm({
+    title: 'Empty Dashboard',
+    template: "Are you sure you want to empty the Dashboard?  <div style=font-size:.6em;text-align:center>*some default coin will be added automatically</div>"
+  });
+
+  confirmPopup.then(function(res) {
+    if(res) {
+      console.log('You are sure');
+      localStorage.setItem('user',  [$scope.listedCoin]);
+      $state.reload();
+    } else {
+      console.log('You are not sure');
+    }
+  });
+
+}
 
 })

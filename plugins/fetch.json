@@ -26,7 +26,7 @@
   "cordova-plugin-splashscreen": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-splashscreen@~4.0.1"
+      "id": "cordova-plugin-splashscreen@^4.0.3"
     },
     "is_top_level": true,
     "variables": {}
@@ -35,6 +35,14 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-ionic-webview@^1.1.11"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-network-information": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-network-information"
     },
     "is_top_level": true,
     "variables": {}

@@ -7,5 +7,5 @@ myApp.controller("OptionCtrl", function ($scope, $ionicModal)
     }
     console.log($scope.currency)
 
-  
+
 })

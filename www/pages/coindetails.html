@@ -1,0 +1,62 @@
+<ion-header-bar class="bar-stable bar bar-header bar-balanced">
+  <button class="button button-icon icon ion-arrow-left-c" ui-sref="home"></button>
+  <h1 class="title">CryptoWatch
+
+  </h1>
+
+</ion-header-bar>
+
+<ion-content class="coindetails">
+  <div class="subheading">{{coin.name}} Details</div>
+
+
+  <div class="row">
+   
+    <div class="col">Rank : {{coin.rank}} </div>
+    <div class="col">Symbol : {{coin.symbol}} </div>
+  </div>
+  <div class="row">
+    <div class="col">USD : {{coin.price_usd |number}} $ </div>
+    <div class="col">BTC : {{coin.price_btc }} </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">Volume :  {{coin.24h_volume_usd}} USD </div> -->
+    <div class="col">Percent Change 1h </div>
+    <div class="col">
+
+            <div class="percent_change" ng-class="{'negative':coin.percent_change_1h<0,'positive':coin.percent_change_1h>0}">{{coin.percent_change_1h}} % </div></div>
+        
+    </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">Volume :  {{coin.24h_volume_usd}} USD </div> -->
+    <div class="col">Percent Change 24h </div>
+    <div class="col"><div class="percent_change" ng-class="{'negative':coin.percent_change_24h<0,'positive':coin.percent_change_24h>0}">{{coin.percent_change_24h}} % </div></div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">Volume :  {{coin.24h_volume_usd}} USD </div> -->
+    <div class="col">Percent Change 7d </div>
+    <div class="col">
+            <div class="percent_change" ng-class="{'negative':coin.percent_change_7d<0,'positive':coin.percent_change_7d>0}">{{coin.percent_change_7d}} % </div></div>
+
+    </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">Volume :  {{coin.24h_volume_usd}} USD </div> -->
+    <div class="col">Market Cap : </div>
+    <div class="col">{{coin.market_cap_usd | number}} USD </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">Volume :  {{coin.24h_volume_usd}} USD </div> -->
+    <div class="col">Total Supply: </div>
+    <div class="col">{{coin.total_supply | number}} </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">Volume :  {{coin.24h_volume_usd}} USD </div> -->
+    <div class="col">Max Supply: </div>
+    <div class="col">{{coin.max_supply}} </div>
+  </div>
+<div class="removebtn">
+    <div class="button">Remove From Dashboard</div>
+</div>
+</ion-content>

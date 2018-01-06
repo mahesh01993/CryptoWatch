@@ -1,0 +1,63 @@
+<ion-header-bar class="bar-stable bar bar-header bar-balanced">
+  <button class="button button-icon icon ion-arrow-left-c" ui-sref="home"></button>
+  <h1 class="title">CryptoWatch
+
+  </h1>
+
+</ion-header-bar>
+
+<ion-content>
+  <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+  </ion-refresher>
+
+  <div class="subheading">All Coin</div>
+
+  <div class="loader">
+    <img src="img/loader.gif">
+  </div>
+
+  <div class="main">
+
+
+    <div class="list">
+      <div class="item row header">
+        <!-- <div class="col">Rank</div> -->
+        <div class="col-4" ng-click="changesort('rank')">Rank</div>
+        <div class="col" ng-click="changesort('name')">Name</div>
+        <div class="col" ng-click="changesort('price_usd')">Price</div>
+        <div class="col" ng-click="changesort('percent_change_24h')">% Change</div>
+        <!-- <div class="col" >in dashboard</div> -->
+        <!-- <div class="col">Percent Change</div> -->
+      </div>
+      <div class="item  row coindata" ng-repeat="x in data | orderBy:sort" ng-click="coinOption(x)">
+        <div class="col-4">{{x.rank}}</div>
+        <div class="col">
+          <i class="cc {{x.symbol}} {{x.name}}" title="{{x.symbol}}"></i> {{x.name}}</div>
+        <div class="col">
+          <span class="money">$</span> {{x.price_usd | number}}
+          <div>{{x.price_usd*USD_INR | number}} INR</div>
+        </div>
+        <div class="col">
+          <div class="percent_change" ng-class="{'negative':x.percent_change_24h<0,'positive':x.percent_change_24h>0}">{{x.percent_change_24h}} % </div>
+        </div>
+        <div class="col-1 custom-col">
+          <span class="custom-badge " ng-if="!x.in_dashboard">
+            <span class="icon ion-plus-circled"></span>
+          </span>
+          <span class="custom-badge " ng-if="x.in_dashboard">
+            <span class="icon ion-minus-circled"></span>
+
+          </span>
+
+        </div>
+        <!-- <div class="col">
+  
+                <span ng-class="{'negative':x.percent_change_24h<0,'positive':x.percent_change_24h>0}">{{x.percent_change_24h}} % </span>
+              </div> -->
+      </div>
+    </div>
+
+
+  </div>
+
+</ion-content>

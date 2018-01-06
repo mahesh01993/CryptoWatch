@@ -1,0 +1,32 @@
+<ion-header-bar class="bar-stable bar bar-header bar-balanced">
+  <button class="button button-icon icon ion-arrow-left-c" ui-sref="home"></button>
+  <h1 class="title">CryptoWatch
+
+  </h1>
+
+</ion-header-bar>
+
+<ion-content class="search-content">
+  <div class="subheading">Search Coin</div>
+
+  <div class="main">
+    <input type="text" name="text" value="*" ng-model="searchText">
+
+
+    <div class="items">
+      <div class="item" ng-repeat="x in data | filter:searchText" ng-click="coinOption(x)">{{x.name}}
+        <div class="toright">
+          <span class="custom-badge " ng-if="!x.in_dashboard">
+            <span class="icon ion-plus-circled"></span>
+          </span>
+          <span class="custom-badge " ng-if="x.in_dashboard">
+            <span class="icon ion-minus-circled"></span>
+
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</ion-content>

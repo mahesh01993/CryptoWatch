@@ -1,0 +1,43 @@
+<ion-header-bar class="bar-stable bar bar-header bar-balanced">
+  <h1 class="title">CryptoWatch
+  </h1>
+
+  <button class="button button-icon icon ion-navicon" ui-sref="option"></button>
+</ion-header-bar>
+
+<ion-content>
+
+  <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+  </ion-refresher>
+<div class="subheading">Dashboard</div>
+
+  <div class="list">
+    <div class="item row header">
+      <div class="col-4">Rank</div>
+      <div class="col">Name</div>
+      <div class="col">Price
+        <!-- <div>Price in {{currency}}</div> -->
+      </div>
+      <div class="col">% change in 24hr</div>
+      <!-- <div class="col">Percent Change</div> -->
+    </div>
+    <div class="item  row coindata" ng-repeat="x in ListofData | orderBy:'id'">
+      <div class="col-4">{{x.rank}}</div>
+      <div class="col">
+        <i class="cc {{x.symbol}} {{x.name}}" title="{{x.symbol}}"></i> {{x.name}}</div>
+      <div class="col">
+        <span class="money">$</span> {{x.price_usd | number}}
+       <div> {{getrate(x) | number}} {{currency}}</div>
+        
+      </div>
+      <div class="col">
+
+          <div class="percent_change" ng-class="{'negative':x.percent_change_24h<0,'positive':x.percent_change_24h>0}">{{x.percent_change_24h}} % </div>
+      </div>
+      <!-- <div class="col">
+  
+                <span ng-class="{'negative':x.percent_change_24h<0,'positive':x.percent_change_24h>0}">{{x.percent_change_24h}} % </span>
+              </div> -->
+    </div>
+  </div>
+</ion-content>

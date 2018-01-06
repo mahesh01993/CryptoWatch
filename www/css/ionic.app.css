@@ -9887,17 +9887,107 @@ a.button {
 
 .negative {
   color: red;
-  font-weight: bold;
-  font-size: 12px; }
+  font-weight: bold; }
 
 .positive {
   color: green;
-  font-weight: bold;
-  font-size: 12px; }
+  font-weight: bold; }
 
-.header .col {
+.header .col,
+.header .col-4 {
   font-weight: bold;
   font-size: 10px; }
 
-.coinData .col {
-  font-size: 10px; }
+.coindata {
+  padding: 10px; }
+  .coindata .col,
+  .coindata .col-4 {
+    font-size: 10px; }
+
+.col {
+  text-align: center; }
+
+.option .icon {
+  color: green; }
+
+.option .item {
+  font-size: 14px; }
+
+.subheading {
+  text-align: center;
+  padding: 2px;
+  background: #d0f7d7; }
+
+.custom-col {
+  text-align: right; }
+  .custom-col .custom-badge {
+    border-radius: 34%;
+    color: green;
+    text-transform: capitalize;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%; }
+
+.action-sheet .action-sheet-title {
+  font-size: 1.5em;
+  color: green;
+  background: azure; }
+
+.action-sheet .action-sheet-option {
+  font-size: 1em; }
+
+.search-content input {
+  background: #d8d8d8;
+  color: green;
+  width: 100%;
+  border: 3px solid #9b9191; }
+
+.search-content .toright {
+  float: right; }
+  .search-content .toright .custom-badge {
+    border-radius: 34%;
+    color: green;
+    text-transform: capitalize;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%; }
+
+.bar-balanced .button.active,
+.bar-balanced .button.activated {
+  border-color: unset !important;
+  background-color: unset !important; }
+
+.clearbutton {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  border: 0px; }
+  .clearbutton .button {
+    border: 0px;
+    padding: 2px; }
+
+.max-content {
+  min-width: max-content !important; }
+
+.aboutus .b {
+  padding: 10px; }
+
+.aboutus .footer {
+  text-align: center; }
+
+.coindetails {
+  background: #d0f7d7; }
+  .coindetails .row {
+    padding: 3%;
+    text-transform: capitalize; }
+  .coindetails .removebtn {
+    text-align: center;
+    padding: 20px; }
+    .coindetails .removebtn .button {
+      background: red;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      font-size: 1em; }

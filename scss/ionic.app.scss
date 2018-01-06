@@ -37,27 +37,148 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .negative {
   color: red;
-  font-weight: bold;
-  font-size: 12px;
+  font-weight: bold; // font-size: 12px;
 }
 
 .positive {
   color: green;
-  font-weight: bold;
-  font-size: 12px;
+  font-weight: bold; // font-size: 12px;
 }
 
-
-
 .header {
-  .col {
+  .col,
+  .col-4 {
     font-weight: bold;
     font-size: 10px;
   }
 }
 
-.coinData{
-    .col{
-        font-size: 10px;
+.coindata {
+  padding: 10px;
+  .col,
+  .col-4 {
+    font-size: 10px;
+  }
+}
+
+.col {
+  text-align: center;
+}
+
+.option {
+  .icon {
+    color: green;
+  }
+  .item {
+    font-size: 14px;
+  }
+}
+
+.subheading {
+  text-align: center;
+  padding: 2px;
+  background: #d0f7d7;
+}
+
+.custom-col {
+  text-align: right;
+  .custom-badge {
+    // background: #081c51;
+    border-radius: 34%;
+    color: green;
+    text-transform: capitalize;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%;
+  }
+}
+
+.action-sheet {
+  .action-sheet-title {
+    font-size: 1.5em;
+    color: green;
+    background: azure;
+  }
+  .action-sheet-option {
+    font-size: 1em;
+  }
+}
+
+.search-content {
+  input {
+    background: #d8d8d8;
+    color: green;
+    width: 100%;
+    border: 3px solid #9b9191;
+  }
+  .toright {
+    float: right;
+    .custom-badge {
+      // background: #081c51;
+      border-radius: 34%;
+      color: green;
+      text-transform: capitalize;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      height: 100%;
     }
+  }
+}
+
+// .currency_show {
+//   background: #b7d9b7;
+//   border-radius: 25px;
+//   color: black;
+//   font-size: 0.85em;
+// }
+.bar-balanced .button.active,
+.bar-balanced .button.activated {
+  border-color: unset !important;
+  background-color: unset !important;
+}
+
+.clearbutton {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  border: 0px;
+  .button {
+    border: 0px;
+    padding: 2px;
+  }
+}
+
+.max-content {
+  min-width: max-content !important;
+}
+
+.aboutus {
+  .b {
+    padding: 10px;
+    p {}
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+.coindetails {
+  background: #d0f7d7;
+  .row {
+    padding: 3%;
+    text-transform: capitalize;
+  }
+  .removebtn {
+    text-align: center;
+    padding: 20px;
+    .button {
+      background: red;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+       font-size: 1em;
+    }
+  }
 }

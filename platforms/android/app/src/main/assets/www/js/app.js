@@ -5,7 +5,38 @@
 // the 2nd parameter is an array of 'requires'
 var myApp = angular.module('starter', ['ionic', 'ui.router'])
 
-  .run(function ($ionicPlatform) {
+  .run(function ($ionicPlatform, $rootScope, $ionicHistory) {
+
+
+    $ionicPlatform.registerBackButtonAction(function (e) {
+      // $ionicHistory.goBack();
+      navigator.app.backHistory();
+// alert(e)
+      // if ($rootScope.$viewHistory.backView) {
+      //   $rootScope.$viewHistory.backView.go();
+      // } else {
+      //   var confirmPopup = $ionicPopup.confirm({
+      //     title: 'Confirm Exit',
+      //     template: "Are you sure you want to close APPNAME?"
+      //   });
+      //   confirmPopup.then(function (close) {
+      //     if (close) {
+      //       // there is no back view, so close the app instead
+      //       ionic.Platform.exitApp();
+      //       navigator.app.exitApp();
+      //     } // otherwise do nothing
+      //     console.log("User canceled exit.");
+      //   });
+      // }
+
+      // e.preventDefault();
+      // return false;
+
+
+
+      // alert("from run element")
+    }, 101);
+
     $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins.Keyboard) {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -16,11 +47,12 @@ var myApp = angular.module('starter', ['ionic', 'ui.router'])
         // from snapping when text inputs are focused. Ionic handles this internally for
         // a much nicer keyboard experience.
         cordova.plugins.Keyboard.disableScroll(true);
-        $ionicPlatform.onHardwareBackButton(function() {
-          event.preventDefault();
-          event.stopPropagation();
-          alert('going back now yall');
-       });
+        // $ionicPlatform.onHardwareBackButton(function (event) {
+        //   event.preventDefault();
+        //   event.stopPropagation();
+        //   console.log("backing yooooo")
+        //   // alert('going back now yall');
+        // });
       }
       if (window.StatusBar) {
         StatusBar.styleDefault();

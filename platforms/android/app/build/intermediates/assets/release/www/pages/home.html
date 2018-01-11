@@ -1,0 +1,63 @@
+<ion-header-bar class="bar-stable bar bar-header bar-balanced" align-title="left" id="homepage">
+
+
+  <h1 class="title max-content" >CryptoWatch
+  </h1>
+
+  <!-- <div class="button">
+    <div class="button">
+      <span class="badge badge-assertive">
+        {{currency}}
+      </span>
+    </div>
+    <div class="button button-icon icon ion-navicon" ui-sref="option"></div>
+  </div> -->
+  
+  
+  <div class="buttons clearbutton">
+      <div class="button button-icon icon ion-trash-b" ng-click="deleteAll()"></div>
+    <div class="button" ui-sref="selectcurrency"> <span class="badge badge-assertive">
+        {{currency}}
+      </span></div>
+    <div class="button button-icon icon ion-navicon"  ui-sref="option"></div>
+  </div>
+  <!-- <div class="button button-icon icon ion-navicon" ui-sref="option"></div> -->
+</ion-header-bar>
+
+<ion-content>
+  <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+  </ion-refresher>
+  <div class="subheading">Dashboard</div>
+  <div class="loader" ng-if="ListofData==[]">
+      <img src="img/loader.gif">
+  </div>
+  <div class="list">
+    <div class="item row header">
+      <div class="col-4" ng-click="changeSort('rank')">Rank</div>
+      <div class="col" ng-click="changeSort('name')">Name</div>
+      <div class="col" ng-click="changeSort('price_usd')">Price
+        <!-- <div>Price in {{currency}}</div> -->
+      </div>
+      <div class="col" ng-click="changeSort('percent_change_24h')">% change in 24hr</div>
+      <!-- <div class="col">Percent Change</div> -->
+    </div>
+    <div class="item  row coindata" ng-repeat="x in ListofData | orderBy: sort" ng-click="coinDetails(x)">
+      <div class="col-4">{{x.rank}}</div>
+      <div class="col">
+        <i class="cc {{x.symbol}} {{x.name}}" title="{{x.symbol}}"></i> {{x.name}}</div>
+      <div class="col">
+        <span class="money">$</span> {{x.price_usd | number}}
+        <div class="currency_show"> {{getrate(x) | number}} {{currency}}</div>
+
+      </div>
+      <div class="col">
+
+        <div class="percent_change" ng-class="{'negative':x.percent_change_24h<0,'positive':x.percent_change_24h>0}">{{x.percent_change_24h}} % </div>
+      </div>
+      <!-- <div class="col">
+  
+                <span ng-class="{'negative':x.percent_change_24h<0,'positive':x.percent_change_24h>0}">{{x.percent_change_24h}} % </span>
+              </div> -->
+    </div>
+  </div>
+</ion-content>

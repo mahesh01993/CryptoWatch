@@ -180,12 +180,14 @@ color:black;
     font-size: 1.5em;
     padding: 20px;
     padding-bottom: 10px;
+    background: white
   }
-  background: #d0f7d7;
+  background: white;
   .row {
     padding: 3%;
     text-transform: capitalize;
   }
+
   .removebtn {
     text-align: center;
     padding: 20px;
@@ -227,4 +229,8 @@ color:black;
     font-weight: bold;
   }
   
+}
+
+.color-red{
+  color:red !important;
 }

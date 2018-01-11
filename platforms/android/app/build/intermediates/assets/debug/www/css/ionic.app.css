@@ -9980,7 +9980,7 @@ a.button {
   text-align: center; }
 
 .coindetails {
-  background: #d0f7d7; }
+  background: white; }
   .coindetails hr {
     width: 75%;
     padding: 0px;
@@ -9991,7 +9991,8 @@ a.button {
   .coindetails .subheading {
     font-size: 1.5em;
     padding: 20px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    background: white; }
   .coindetails .row {
     padding: 3%;
     text-transform: capitalize; }
@@ -10021,3 +10022,6 @@ a.button {
   .title {
     font-size: 20px;
     font-weight: bold; } }
+
+.color-red {
+  color: red !important; }

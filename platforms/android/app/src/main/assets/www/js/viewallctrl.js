@@ -1,9 +1,8 @@
-myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicActionSheet,$ionicPopup) {
+myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicActionSheet, $ionicPopup) {
 
   console.log("this is sparta")
   $scope.sort = "rank"
   $scope.ripple = "demo rate now but soon will be live"
-
 
   $scope.isThereInDashboard = function (id) {
     // to check coin id is there in dashboard or not
@@ -86,7 +85,7 @@ myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicAction
         $scope.$broadcast('scroll.refreshComplete');
         console.log(i++)
       } else {
-        $scope.ripple = "Some thing went wrong please try again some time "
+        console.log("Some thing went wrong please try again some time later ")
       }
     })
   }
@@ -108,8 +107,8 @@ myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicAction
     var coins = localStorage.getItem('user').split(",");
     var isthere = false;
     console.log(name);
-    if(!coins){
-      coins=[]
+    if (!coins) {
+      coins = []
     }
     for (var i = 0; i < coins.length; i++) {
       if (name == coins[i]) {
@@ -151,30 +150,29 @@ myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicAction
     if (isthere) {
       //if coin is there then ask for remove
       var confirmPopup = $ionicPopup.confirm({
-        title: "Remove "+coin.name,
-        template: 'Kindly Confirm To Remove This Coin from Your Dashboard'
+        title: "Remove " + coin.name,
+        template: 'Remove This Coin from Your Dashboard ?'
       });
-   
-      confirmPopup.then(function(res) {
-        if(res) {
+
+      confirmPopup.then(function (res) {
+        if (res) {
           // console.log('You are sure');
           $scope.addToDashboard(id)
         } else {
           // console.log('You are not sure');
         }
       });
-    }
-    else{
-//if coin is not there then ask for add
+    } else {
+      //if coin is not there then ask for add
 
-      console.log("else")
+      // console.log("else")
       var confirmPopup = $ionicPopup.confirm({
-        title: "Add "+coin.name,
-        template: 'Kindly Confirm To Add This Coin To Your Dashboard'
+        title: "Add " + coin.name,
+        template: 'Add This Coin To Your Dashboard ?'
       });
-   
-      confirmPopup.then(function(res) {
-        if(res) {
+
+      confirmPopup.then(function (res) {
+        if (res) {
           // console.log('You are sure');
           $scope.addToDashboard(id)
         } else {

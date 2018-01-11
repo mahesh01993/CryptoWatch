@@ -1,5 +1,11 @@
-myApp.controller("HomeCtrl", function ($scope, $http, $interval, $filter, $state, $timeout,$ionicPopup, $ionicModal, $ionicPopover) {
+myApp.controller("HomeCtrl", function ($scope,$rootScope, $http, $interval,$ionicPlatform, $filter, $state, $timeout,$ionicPopup, $ionicModal, $ionicPopover) {
 
+//   $ionicPlatform.onHardwareBackButton(function(e) {
+//     console.log('back button called')
+//     e.stopPropagation();
+//     alert('you sure you want to exit?');
+//  });
+// console.log($rootScope.$viewHistory.backView,'backview from home')
   $scope.listedCoin = ["bitcoin", "ripple", "ethereum"]
   //   localStorage.setItem('user', $scope.listedCoin);
   //   console.log(localStorage.getItem('user', $scope.listedCoin).split(","))

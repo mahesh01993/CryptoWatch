@@ -100,7 +100,7 @@ myApp.controller("SearchCtrl", function ($scope, $http, $interval, $ionicActionS
       //if coin is there then ask for remove
       var confirmPopup = $ionicPopup.confirm({
         title: "Remove "+coin.name,
-        template: 'Kindly Confirm To Remove This Coin from Your Dashboard'
+        template: 'Remove This Coin from Your Dashboard ?'
       });
    
       confirmPopup.then(function(res) {
@@ -118,7 +118,7 @@ myApp.controller("SearchCtrl", function ($scope, $http, $interval, $ionicActionS
       console.log("else")
       var confirmPopup = $ionicPopup.confirm({
         title: "Add "+coin.name,
-        template: 'Kindly Confirm To Add This Coin To Your Dashboard'
+        template: 'Add This Coin To Your Dashboard ?'
       });
    
       confirmPopup.then(function(res) {

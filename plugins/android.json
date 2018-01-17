@@ -24,7 +24,17 @@
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-facebookads": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
+    },
+    "cordova-facebook-audnet-sdk": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
+    }
+  }
 }

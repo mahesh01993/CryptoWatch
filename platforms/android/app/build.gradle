@@ -91,6 +91,9 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-plugin-extension/mhsstudio-rjfun-libs.gradle"
+apply from: "../cordova-facebook-audnet-sdk/mhsstudio-fb-adsdk.gradle"
+apply from: "../cordova-plugin-facebookads/mhsstudio-android-support.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -259,6 +262,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    compile "com.facebook.android:audience-network-sdk:4.+"
+    compile "com.google.android.gms:play-services-ads:+"
+    compile "com.android.support:support-v4:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

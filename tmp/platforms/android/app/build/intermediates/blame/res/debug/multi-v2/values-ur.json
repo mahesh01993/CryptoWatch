@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/juily/Desktop/ionic/CryptoWatch/tmp/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
+            "map": [
+                {
+                    "source": "/home/juily/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/de14ab40196c2085263be34527748c76/res/values-ur/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "283",
+                        "endColumns": "210",
+                        "endOffsets": "493"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "210",
+                        "endOffsets": "311"
+                    }
+                },
+                {
+                    "source": "/home/juily/.gradle/caches/transforms-1/files-1.1/play-services-ads-11.8.0.aar/eef6767d052c748596ac8fbede0ac74d/res/values-ur/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "235,308,423,490,558,635,739",
+                        "endColumns": "72,114,66,67,76,103,73",
+                        "endOffsets": "307,422,489,557,634,738,812"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "316,393,512,583,655,736,844",
+                        "endColumns": "76,118,70,71,80,107,77",
+                        "endOffsets": "388,507,578,650,731,839,917"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -41,6 +41,14 @@ module.exports = [
     "clobbers": [
       "navigator.splashscreen"
     ]
+  },
+  {
+    "id": "cordova-plugin-facebookads.FacebookAds",
+    "file": "plugins/cordova-plugin-facebookads/www/FacebookAds.js",
+    "pluginId": "cordova-plugin-facebookads",
+    "clobbers": [
+      "window.FacebookAds"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -51,7 +59,10 @@ module.exports.metadata =
   "cordova-plugin-device": "1.1.4",
   "cordova-plugin-ionic-webview": "1.1.16",
   "cordova-plugin-network-information": "2.0.1",
-  "cordova-plugin-splashscreen": "4.1.0"
+  "cordova-plugin-splashscreen": "4.1.0",
+  "cordova-plugin-extension": "1.5.4",
+  "cordova-facebook-audnet-sdk": "4.26.2",
+  "cordova-plugin-facebookads": "4.23.2"
 };
 // BOTTOM OF METADATA
 });

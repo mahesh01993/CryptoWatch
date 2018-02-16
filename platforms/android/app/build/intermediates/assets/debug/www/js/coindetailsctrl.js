@@ -1,4 +1,4 @@
-myApp.controller("coinDetailsCtrl", function ($scope, $ionicModal, $state, $stateParams, $state) {
+myApp.controller("coinDetailsCtrl", function ($scope, $ionicModal, $state, $stateParams, $state,$ionicPlatform) {
   console.log("line 3")
   console.log($stateParams.myParam);
 
@@ -48,4 +48,11 @@ myApp.controller("coinDetailsCtrl", function ($scope, $ionicModal, $state, $stat
     $scope.addToDashboard(x.id)
   }
 
+
+  $ionicPlatform.registerBackButtonAction(function (e) {
+  
+    console.log('back button clicked from coin details')
+    navigator.app.backHistory();
+  },102)
+  
 })

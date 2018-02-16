@@ -1,4 +1,4 @@
-myApp.controller("CurrencyCtrl", function ($scope, $ionicModal, $state)
+myApp.controller("CurrencyCtrl", function ($scope, $ionicModal, $state, $ionicPlatform)
  {
     $scope.currency=localStorage.getItem('currency');
     if(!$scope.currency){
@@ -14,6 +14,12 @@ myApp.controller("CurrencyCtrl", function ($scope, $ionicModal, $state)
         localStorage.setItem('currency',x);
         $state.go('home')
     }
+
+    $ionicPlatform.registerBackButtonAction(function (e) {
+  
+        console.log('back button clicked from currencyctrl')
+        navigator.app.backHistory();
+      },102)
 })
 
 

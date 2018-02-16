@@ -7,33 +7,30 @@
     "files": {}
   },
   "installed_plugins": {
-    "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     },
     "cordova-plugin-facebookads": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
+    },
+    "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     }
   },
   "dependent_plugins": {
-    "cordova-plugin-extension": {
+    "cordova-facebook-audnet-sdk": {
       "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     },
-    "cordova-facebook-audnet-sdk": {
+    "cordova-plugin-extension": {
       "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     }
   }

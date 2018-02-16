@@ -165,4 +165,18 @@ $scope.deleteAll=function()
 
 }
 
+
+// app exit
+
+
+  $ionicPlatform.registerBackButtonAction(function (e) {
+  
+    console.log('back button clicked from home')
+    navigator.app.exitApp();
+  },102)
+
+
+
+
+
 })

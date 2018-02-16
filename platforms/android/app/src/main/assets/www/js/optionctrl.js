@@ -20,4 +20,10 @@ myApp.controller("OptionCtrl", function ($scope,$state,$rootScope,$ionicHistory,
     //       navigator.app.backHistory();
     //     }
     //   }, 100);
+
+    $ionicPlatform.registerBackButtonAction(function (e) {
+  
+        console.log('back button clicked from option')
+        navigator.app.backHistory();
+      },102)
 })

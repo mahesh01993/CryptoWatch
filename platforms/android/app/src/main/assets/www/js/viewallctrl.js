@@ -1,4 +1,4 @@
-myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicActionSheet, $ionicPopup) {
+myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicActionSheet,$ionicPlatform, $ionicPopup) {
 
   console.log("this is sparta")
   $scope.sort = "rank"
@@ -200,6 +200,12 @@ myApp.controller("ViewAllCtrl", function ($scope, $http, $interval, $ionicAction
     //     return true;
     //   }
     // });
-
+   
   }
+
+  $ionicPlatform.registerBackButtonAction(function (e) {
+  
+    console.log('back button clicked from viewallcoin')
+    navigator.app.backHistory();
+  },102)
 })

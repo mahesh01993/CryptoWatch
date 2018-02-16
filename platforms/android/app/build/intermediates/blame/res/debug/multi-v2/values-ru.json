@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/juily/Desktop/ionic/CryptoWatch/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml",
+            "outputFile": "/home/mahesh/Documents/CryptoWatch/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml",
             "map": [
                 {
                     "source": "/root/.gradle/caches/transforms-1/files-1.1/exoplayer-r2.0.3.aar/da63ba3079e214b0d37520f2f0ad984d/res/values-ru/values-ru.xml",

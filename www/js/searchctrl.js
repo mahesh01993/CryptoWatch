@@ -1,4 +1,4 @@
-myApp.controller("SearchCtrl", function ($scope, $http, $interval, $ionicActionSheet, $ionicPopup) {
+myApp.controller("SearchCtrl", function ($scope, $http, $interval, $ionicActionSheet, $ionicPopup,$ionicPlatform) {
   console.log("In Search Ctrl");
 
   $scope.isThereInDashboard = function (id) {
@@ -156,5 +156,9 @@ myApp.controller("SearchCtrl", function ($scope, $http, $interval, $ionicActionS
 
   }
 
-
+  $ionicPlatform.registerBackButtonAction(function (e) {
+  
+    console.log('back button clicked from search')
+    navigator.app.backHistory();
+  },102)
 })

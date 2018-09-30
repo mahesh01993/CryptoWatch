@@ -1,10 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cryptowatch.mhsstudio" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.cryptowatch.mhsstudio" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="FacebookAds">
-        <param name="android-package" value="com.rjfun.cordova.facebookads.FacebookAdPlugin" />
     </feature>
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />

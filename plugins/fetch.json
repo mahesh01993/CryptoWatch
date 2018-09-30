@@ -47,14 +47,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-facebookads": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-facebookads@^4.23.2"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-extension": {
     "source": {
       "type": "registry",

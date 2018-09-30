@@ -10,9 +10,6 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     },
-    "cordova-plugin-facebookads": {
-      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
-    },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     },
@@ -26,12 +23,5 @@
       "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
     }
   },
-  "dependent_plugins": {
-    "cordova-facebook-audnet-sdk": {
-      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
-    },
-    "cordova-plugin-extension": {
-      "PACKAGE_NAME": "com.cryptowatch.mhsstudio"
-    }
-  }
+  "dependent_plugins": {}
 }

@@ -1,11 +1,11 @@
-myApp.controller("HomeCtrl", function ($scope,$rootScope, $http, $interval,$ionicPlatform, $filter, $state, $timeout,$ionicPopup, $ionicModal, $ionicPopover) {
+myApp.controller("HomeCtrl", function ($scope, $rootScope, $http, $interval, $ionicPlatform, $filter, $state, $timeout, $ionicPopup, $ionicModal, $ionicPopover) {
 
-//   $ionicPlatform.onHardwareBackButton(function(e) {
-//     console.log('back button called')
-//     e.stopPropagation();
-//     alert('you sure you want to exit?');
-//  });
-// console.log($rootScope.$viewHistory.backView,'backview from home')
+  //   $ionicPlatform.onHardwareBackButton(function(e) {
+  //     console.log('back button called')
+  //     e.stopPropagation();
+  //     alert('you sure you want to exit?');
+  //  });
+  // console.log($rootScope.$viewHistory.backView,'backview from home')
   $scope.listedCoin = ["bitcoin", "ripple", "ethereum"]
   //   localStorage.setItem('user', $scope.listedCoin);
   //   console.log(localStorage.getItem('user', $scope.listedCoin).split(","))
@@ -53,7 +53,7 @@ myApp.controller("HomeCtrl", function ($scope,$rootScope, $http, $interval,$ioni
         dataa.percent_change_24h = parseFloat(dataa.percent_change_24h)
         dataa.percent_change_7d = parseFloat(dataa.percent_change_7d)
         dataa.percent_change_1h = parseFloat(dataa.percent_change_1h)
-        
+
 
         $scope.ListofData.push(dataa)
         console.log(data, "inside fdfsdsdjfdh")
@@ -61,7 +61,7 @@ myApp.controller("HomeCtrl", function ($scope,$rootScope, $http, $interval,$ioni
       }
     })
   }
- 
+
 
 
 
@@ -82,7 +82,7 @@ myApp.controller("HomeCtrl", function ($scope,$rootScope, $http, $interval,$ioni
 
           //   $scope.ripple = data.data[1].price_usd + "$" + "   last updated  on" + data.data[1].last_updated
         }
-      },function(){
+      }, function () {
         console.log("something went wrong")
       })
     }
@@ -144,36 +144,35 @@ myApp.controller("HomeCtrl", function ($scope,$rootScope, $http, $interval,$ioni
   }
 
 
-//fn to make dashboard empty
-$scope.deleteAll=function()
-{
+  //fn to make dashboard empty
+  $scope.deleteAll = function () {
 
-  var confirmPopup = $ionicPopup.confirm({
-    title: 'Empty Dashboard',
-    template: "Are you sure you want to empty the Dashboard?  <div style=font-size:.6em;text-align:center>*some default coin will be added automatically</div>"
-  });
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Empty Dashboard',
+      template: "Are you sure you want to empty the Dashboard?  <div style=font-size:.6em;text-align:center>*some default coin will be added automatically</div>"
+    });
 
-  confirmPopup.then(function(res) {
-    if(res) {
-      console.log('You are sure');
-      localStorage.setItem('user',  [$scope.listedCoin]);
-      $state.reload();
-    } else {
-      console.log('You are not sure');
-    }
-  });
+    confirmPopup.then(function (res) {
+      if (res) {
+        console.log('You are sure');
+        localStorage.setItem('user', [$scope.listedCoin]);
+        $state.reload();
+      } else {
+        console.log('You are not sure');
+      }
+    });
 
-}
+  }
 
 
-// app exit
+  // app exit
 
 
   $ionicPlatform.registerBackButtonAction(function (e) {
-  
+
     console.log('back button clicked from home')
     navigator.app.exitApp();
-  },102)
+  }, 102)
 
 
 

@@ -10,10 +10,10 @@ var myApp = angular.module('starter', ['ionic', 'ui.router'])
 
     $ionicPlatform.registerBackButtonAction(function (e) {
 
-      
+
       // $ionicHistory.goBack();
       navigator.app.backHistory();
-// alert(e)
+      // alert(e)
       // if ($rootScope.$viewHistory.backView) {
       //   $rootScope.$viewHistory.backView.go();
       // } else {
@@ -40,28 +40,41 @@ var myApp = angular.module('starter', ['ionic', 'ui.router'])
     }, 101);
 
     $ionicPlatform.ready(function () {
-      var ad_units = {
-        ios : { 
-          banner:"1636223679733260_1636229033066058",
-      
-        },
-        android : {
-          banner:"1636223679733260_1636229033066058",
-         
-        }
-      };
 
-      var adid = (/(android)/i.test(navigator.userAgent)) ? ad_units.android : ad_units.ios;
 
-      // if(FacebookAds) FacebookAds.setOptions({
-      //   isTesting: true,
-      //   deviceHash: 'copy_your_hash_id_from_console_here'
+      //------------------facebook ads network
+      // var ad_units = {
+      //   ios: {
+      //     banner: "1636223679733260_1636229033066058",
+
+      //   },
+      //   android: {
+      //     banner: "1636223679733260_1636229033066058",
+
+      //   }
+      // };
+
+      // var adid = (/(android)/i.test(navigator.userAgent)) ? ad_units.android : ad_units.ios;
+
+      // // if(FacebookAds) FacebookAds.setOptions({
+      // //   isTesting: true,
+      // //   deviceHash: 'copy_your_hash_id_from_console_here'
+      // // });
+      // if (FacebookAds) FacebookAds.createBanner(adid.banner);
+      // if (FacebookAds) FacebookAds.createBanner({
+      //   adId: adid.banner,
+      //   position: FacebookAds.AD_POSITION.BOTTOM_CENTER,
+      //   autoShow: true
       // });
-      if(FacebookAds) FacebookAds.createBanner( adid.banner );
-      if(FacebookAds) FacebookAds.createBanner( {
-        adId: adid.banner, 
-        position:FacebookAds.AD_POSITION.BOTTOM_CENTER, 
-        autoShow:true} );
+      // ----------------------------------end of facebook ads
+
+
+
+
+
+
+
+
 
       if (window.cordova && window.cordova.plugins.Keyboard) {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -79,6 +92,7 @@ var myApp = angular.module('starter', ['ionic', 'ui.router'])
         //   // alert('going back now yall');
         // });
       }
+
       if (window.StatusBar) {
         StatusBar.styleDefault();
       }

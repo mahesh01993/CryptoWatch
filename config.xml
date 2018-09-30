@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cryptowatch.mhsstudio" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.cryptowatch.mhsstudio" version="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CryptoWatch  </name>
     <description>Monitor Cryptocurrency Coin Like BTC,XRP,ETC,etc IN Your Own Native Currency</description>
     <author email="mahesh01993@hotmail.com" href="#">Mahesh</author>

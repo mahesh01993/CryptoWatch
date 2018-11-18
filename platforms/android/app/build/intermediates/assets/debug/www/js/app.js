@@ -70,6 +70,25 @@ var myApp = angular.module('starter', ['ionic', 'ui.router'])
 
 
 
+      // -------------------------google ads unit
+      var admobid = {}
+      if (/(android)/i.test(navigator.userAgent)) { // for android & amazon-fireos
+        admobid = {
+          banner: 'ca-app-pub-3705673445248218/1063785645',
+        }
+      } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
+        admobid = {
+          banner: 'ca-app-pub-3705673445248218/1063785645',
+        }
+      }
+
+
+      admob.banner.config({
+        id: admobid.banner,
+        autoShow: true,
+      })
+      admob.banner.prepare();
+      // -------------------------end of google ads unit
 
 
 

@@ -259,6 +259,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    compile "com.google.android.gms:play-services-base:11.0.4"
+    compile "com.google.android.gms:play-services-ads:11.0.4"
     // SUB-PROJECT DEPENDENCIES END
 }
 
